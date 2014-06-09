@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Registro de clientes</title>
+		<meta charset="UTF-8">
+		<meta name=description content="">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+			
+	</head>
+	<body>
+		<h1 class="text-center">Registro de Datos</h1>
+		
+
+		   <header>
+           
+
+<nav class="navbar navbar-default" role="navigation">
+  <!-- El logotipo y el icono que despliega el menú se agrupan
+       para mostrarlos mejor en los dispositivos móviles -->
+
+ 
+  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+       otro elemento que se pueda ocultar al mini1izar la barra -->
+  <div class="collapse navbar-collapse navbar-ex2-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Clientes</a></li>
+      <li><a href="empleados.html">Empleados</a></li>
+      <li><a href="supervisores.html">Supervisores</a></li>
+      <li class="dropdown">
+        
+        <ul class="dropdown-menu">
+          <li><a href="#">Acción #1</a></li>
+          <li><a href="#">Acción #2</a></li>
+          <li><a href="#">Acción #3</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Acción #4</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Acción #5</a></li>
+        </ul>
+      </li>
+    </ul>
+ 
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+
+
+        <input type="text" class="form-control" placeholder="Buscar">
+      </div>
+      <button type="submit" class="btn btn-default">Enviar</button>
+    </form>
+ 
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Acerca</a></li>
+            
+      
+    </ul>
+  </div>
+</nav>
+
+
+        </header> 
+
+		<div class="container" >
+
+
+			<form role="form" method="POST" action="insertarEmpleado.php">
+
+			<div class="form-group">
+				<label for="nombre">Nombre</label>
+				<div class="row">
+
+					<div class="col-md-3">
+						<input type="text"  pattern="[A-Za-z]+"  title="Introduce solo letras :)" class="form-control" name="nombre" id="nombre" placeholder="escribe un nombre" x-webkit-speech/>
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="form-group">
+				<label for="nombre">Apellido</label>
+				<div class="row">
+
+					<div class="col-md-3">
+						<input type="text"  pattern="[A-Za-z]+"  title="Introduce solo letras :)" class="form-control" name="apellido" id="apellido" placeholder="escribe un apellido" x-webkit-speech/>
+					</div>
+				</div>
+				
+			</div>
+
+
+			<div class="form-group">
+				<label for="email">Email</label>
+				<div class="row">
+					<div class="col-md-3">
+						<input type="email" class="form-control" name="email" id="email"
+						placeholder="escribe un email">
+					</div>
+				</div>
+				
+			</div>
+
+
+			<div class="form-group">
+
+
+				<label for="nombre">Direccion</label>
+				<div class="row">
+
+					<div class="col-md-3">
+						<input type="text"  title="Introduce solo letras :)" class="form-control" name="direccion" id="direccion" placeholder="escribe una direccion" x-webkit-speech/>
+					</div>
+				</div>
+				
+			</div>
+
+
+			<div class="form-group">
+
+
+				<label for="nombre">Telefono</label>
+				<div class="row">
+
+					<div class="col-md-3">
+						<input type="tel"  title="Introduce solo numeros :)" class="form-control" name="telefono" id="telefono" placeholder="Escribe un numero Tel." x-webkit-speech/>
+					</div>
+				</div>
+				
+			</div>
+
+
+
+				<div class="form-group">
+
+
+				<label for="nombre">Puesto</label>
+				<div class="row">
+
+					<div class="col-md-3">
+						<input type="text"  title="Introduce solo letras :)" class="form-control" name="puesto" id="puesto" placeholder="Escribe un puesto" x-webkit-speech/>
+					</div>
+				</div>
+				
+			</div>
+
+
+			<button type="submit" class="btn btn-default">Enviar</button>
+			
+		</form>
+		<br>
+			<form action="listarEmpleados.php" method="POST" role="form">
+			
+		
+			<button type="submit" class="btn btn-primary">Listar Empleados</button>
+		</form>
+
+		<br>
+		<br>
+		<br>
+
+		
+		<form action=" eliminarEmpleado.php" method="POST" role="form">
+			<legend>Eliminar Empleados</legend>
+		
+			<div class="form-group">
+				<label for="">ID Empleado</label>
+				<input type="text" class="form-control"  name="id" placeholder="Inserte ID del cliente que quiere eliminar">
+			</div>
+		
+			
+		
+			<button type="submit" class="btn btn-primary">Eliminar Empleado</button>
+		</form>
+
+		</div>
+
+	 
+
+
+		
+					
+		</div>
+	</body>
+</html>

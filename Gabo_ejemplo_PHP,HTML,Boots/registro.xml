@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.1.12
+- http://www.phpmyadmin.net
+-
+- Servidor: 127.0.0.1
+- Tiempo de generación: 09-06-2014 a las 06:19:49
+- Versión del servidor: 5.6.16
+- Versión de PHP: 5.5.11
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="registro" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="cliente">
+                CREATE TABLE `cliente` (
+                  `id_cliente` int(5) NOT NULL AUTO_INCREMENT,
+                  `nombre` varchar(25) NOT NULL,
+                  `apellido` varchar(25) NOT NULL,
+                  `direccion` varchar(50) NOT NULL,
+                  `telefono` int(20) NOT NULL,
+                  `email` varchar(25) NOT NULL,
+                  PRIMARY KEY (`id_cliente`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="contacto">
+                CREATE TABLE `contacto` (
+                  `nombre` int(50) NOT NULL,
+                  `correo` varchar(30) NOT NULL,
+                  `comentario` text NOT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="empleado">
+                CREATE TABLE `empleado` (
+                  `id_empleado` int(5) NOT NULL AUTO_INCREMENT,
+                  `nombre` varchar(25) NOT NULL,
+                  `apellido` varchar(25) NOT NULL,
+                  `direccion` varchar(50) NOT NULL,
+                  `telefono` int(20) NOT NULL,
+                  `email` varchar(40) NOT NULL,
+                  `puesto` varchar(20) NOT NULL,
+                  PRIMARY KEY (`id_empleado`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="supervisor">
+                CREATE TABLE `supervisor` (
+                  `id_supervisor` int(5) NOT NULL AUTO_INCREMENT,
+                  `nombre` varchar(25) NOT NULL,
+                  `apellido` varchar(25) NOT NULL,
+                  `direccion` varchar(40) NOT NULL,
+                  `telefono` int(20) NOT NULL,
+                  `email` varchar(30) NOT NULL,
+                  PRIMARY KEY (`id_supervisor`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de datos: 'registro'
+    -->
+    <database name="registro">
+        <!-- Tabla cliente -->
+        <!-- Tabla contacto -->
+        <!-- Tabla empleado -->
+        <table name="empleado">
+            <column name="id_empleado">1</column>
+            <column name="nombre">fredy</column>
+            <column name="apellido">rod</column>
+            <column name="direccion">cahhe22</column>
+            <column name="telefono">76876</column>
+            <column name="email">drag@hotmail.com</column>
+            <column name="puesto">subgerente</column>
+        </table>
+        <!-- Tabla supervisor -->
+    </database>
+</pma_xml_export>
